@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jam Beauty Co. — modern, affordable everyday skincare and beauty essentials from the City of Manila. Business portfolio.">
+    <meta name="theme-color" content="#c85a75">
+    <meta property="og:title" content="Jam Beauty Co. | Business Portfolio">
+    <meta property="og:description" content="Affordable everyday skincare and beauty essentials. Beauty starts with you.">
+    <meta property="og:image" content="assets/images/cleanser.jpg">
+    <title>Jam Beauty Co. | Business Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script>
+        /* Apply saved theme before paint to avoid a flash */
+        try {
+            var t = localStorage.getItem("jam-theme");
+            if (t && t !== "default") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <img src="assets/images/logo.svg" alt="" class="preloader-logo">
+            <div class="preloader-word">JAM <span>BEAUTY CO.</span></div>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header id="siteHeader">
+        <div class="nav">
+            <a href="#home" class="logo" aria-label="Jam Beauty Co. home">
+                <img src="assets/images/logo.svg" alt="" width="34" height="34">
+                <span>JAM <em>BEAUTY CO.</em></span>
+            </a>
+
+            <nav id="mainNav" aria-label="Main navigation">
+                <a href="#about" class="active">About</a>
+                <a href="#products">Products</a>
+                <a href="#calculator">Routine</a>
+                <a href="#marketing">4Ps Mix</a>
+                <a href="#contact">Contact</a>
+                <span class="nav-indicator" id="navIndicator"></span>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-select-wrap" role="group" aria-label="Theme selector">
+                    <button class="theme-dot active" data-set-theme="default" title="Blush Pink" aria-label="Blush Pink theme"><i class="fa-solid fa-heart"></i></button>
+                    <button class="theme-dot" data-set-theme="rosegold" title="Rose Gold" aria-label="Rose Gold theme"><i class="fa-solid fa-gem"></i></button>
+                    <button class="theme-dot" data-set-theme="dark" title="Pearl Dark" aria-label="Pearl Dark theme"><i class="fa-solid fa-moon"></i></button>
+                </div>
+                <button class="routine-pill" id="routinePill" aria-label="Jump to routine builder">
+                    <i class="fa-solid fa-bag-shopping"></i><span id="pillCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow reveal"><i class="fa-solid fa-wand-magic-sparkles"></i> Everyday beauty, made approachable</span>
+                    <h1 class="reveal" style="--d:.08s">Feel good in<br><span class="grad-text">your own glow.</span></h1>
+                    <p class="reveal" style="--d:.16s">
+                        Jam Beauty Co. brings together affordable everyday skincare and beauty essentials
+                        to make personal care simple, enjoyable, and accessible to everyone.
+                    </p>
+                    <div class="hero-actions reveal" style="--d:.24s">
+                        <a class="btn btn-primary magnetic" href="#products"><i class="fa-solid fa-bag-shopping"></i> Explore Products</a>
+                        <a class="btn btn-secondary magnetic" href="#calculator"><i class="fa-solid fa-wand-sparkles"></i> Build My Routine</a>
+                    </div>
+                    <div class="hero-stats reveal" style="--d:.32s">
+                        <div><strong data-count="3">0</strong><span>Core products</span></div>
+                        <div><strong data-count="180" data-prefix="₱">0</strong><span>Prices from</span></div>
+                        <div><strong data-count="3">0</strong><span>Social channels</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-art-stage reveal" style="--d:.2s" id="heroStage">
+                    <div class="hero-art-bg"></div>
+                    <div class="hero-ring"></div>
+                    <div class="hero-card hc-main" data-depth="1">
+                        <picture>
+                            <source srcset="assets/images/serum.webp" type="image/webp">
+                            <img src="assets/images/serum.jpg" alt="Jam Beauty Co. Facial Serum" width="1200" height="1200" fetchpriority="high">
+                        </picture>
+                    </div>
+                    <div class="hero-card hc-left" data-depth="1.8">
+                        <picture>
+                            <source srcset="assets/images/cleanser-sm.webp" type="image/webp">
+                            <img src="assets/images/cleanser.jpg" alt="Jam Beauty Co. Facial Cleanser" width="640" height="640">
+                        </picture>
+                    </div>
+                    <div class="hero-card hc-right" data-depth="2.2">
+                        <picture>
+                            <source srcset="assets/images/liptint-sm.webp" type="image/webp">
+                            <img src="assets/images/liptint.jpg" alt="Jam Beauty Co. Lip Tint" width="640" height="640">
+                        </picture>
+                    </div>
+                    <div class="float-badge fb-1"><i class="fa-solid fa-circle-check"></i><span>Everyday Ritual</span></div>
+                    <div class="float-badge fb-2"><i class="fa-solid fa-star"></i><span>Simple. Fresh. You.</span></div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span><i class="fa-solid fa-heart"></i> Beauty starts with you</span>
+                <span><i class="fa-solid fa-droplet"></i> Cleanse • Refresh • Glow</span>
+                <span><i class="fa-solid fa-sparkles"></i> Affordable everyday essentials</span>
+                <span><i class="fa-solid fa-leaf"></i> Gentle care for healthy, glowing skin</span>
+                <span><i class="fa-solid fa-heart"></i> Beauty starts with you</span>
+                <span><i class="fa-solid fa-droplet"></i> Cleanse • Refresh • Glow</span>
+                <span><i class="fa-solid fa-sparkles"></i> Affordable everyday essentials</span>
+                <span><i class="fa-solid fa-leaf"></i> Gentle care for healthy, glowing skin</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Our Business Portfolio</span>
+                    <h2>Beauty that fits everyday life.</h2>
+                    <p>Helping customers feel confident through accessible personal-care items and a friendly experience.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="glass-panel tilt reveal">
+                        <h3><i class="fa-solid fa-store"></i> About Jam Beauty Co.</h3>
+                        <p>Jam Beauty Co. is a beauty and personal-care venture based in the City of Manila. It focuses on everyday skincare and beauty essentials for customers who want practical choices at reasonable prices.</p>
+                        <p>We aim to build trust through clear product information, attractive presentation, responsive customer service, and consistent attention to customer satisfaction.</p>
+                        <div class="location-chip"><i class="fa-solid fa-location-dot"></i> City of Manila, Philippines</div>
+                    </article>
+
+                    <article class="glass-panel tilt reveal" style="--d:.1s">
+                        <h3><i class="fa-solid fa-bullseye"></i> Mission &amp; Vision</h3>
+                        <p><strong>Mission:</strong> To make everyday beauty and skincare more accessible by offering affordable, useful products and a welcoming customer experience.</p>
+                        <p><strong>Vision:</strong> To grow into a trusted beauty brand known for value, reliability, and helping customers express their personal style with confidence.</p>
+                        <div class="values-list">
+                            <div class="value-card"><i class="fa-solid fa-shield-heart"></i>Quality</div>
+                            <div class="value-card"><i class="fa-solid fa-piggy-bank"></i>Affordability</div>
+                            <div class="value-card"><i class="fa-solid fa-handshake"></i>Trust</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="products-section" id="products">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Featured Selection</span>
+                    <h2>Everyday Essentials</h2>
+                    <p>Discover affordable skincare and beauty essentials crafted for your daily glow.</p>
+                </div>
+
+                <div class="filter-bar reveal" role="tablist" aria-label="Filter products">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Products</button>
+                    <button class="filter-btn" data-filter="skincare" role="tab" aria-selected="false">Skincare</button>
+                    <button class="filter-btn" data-filter="cosmetics" role="tab" aria-selected="false">Cosmetics</button>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <article class="product-card tilt reveal" data-category="skincare" data-id="cleanser">
+                        <span class="product-tag">Best Seller</span>
+                        <button class="product-img-box" data-open="cleanser" aria-label="View Facial Cleanser details">
+                            <picture>
+                                <source srcset="assets/images/cleanser-sm.webp" type="image/webp">
+                                <img src="assets/images/cleanser.jpg" alt="Jam Beauty Co. Facial Cleanser, 100ml" loading="lazy" width="640" height="640">
+                            </picture>
+                            <span class="img-hover"><i class="fa-solid fa-expand"></i> Quick view</span>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-meta"><span>Skincare</span><span>100ml</span></div>
+                            <h3>Facial Cleanser</h3>
+                            <div class="product-price">₱250</div>
+                            <p class="product-desc">A gentle daily cleansing essential for a clean, refreshed, and glowing face routine.</p>
+                        </div>
+                        <div class="product-card-actions">
+                            <button class="btn btn-primary" data-open="cleanser">View Details</button>
+                            <button class="btn-icon" data-toggle="cleanser" aria-label="Add Facial Cleanser to routine" aria-pressed="false"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="product-card tilt reveal" style="--d:.1s" data-category="skincare" data-id="serum">
+                        <span class="product-tag">Glow Booster</span>
+                        <button class="product-img-box" data-open="serum" aria-label="View Facial Serum details">
+                            <picture>
+                                <source srcset="assets/images/serum-sm.webp" type="image/webp">
+                                <img src="assets/images/serum.jpg" alt="Jam Beauty Co. Facial Serum, 30ml" loading="lazy" width="640" height="640">
+                            </picture>
+                            <span class="img-hover"><i class="fa-solid fa-expand"></i> Quick view</span>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-meta"><span>Skincare</span><span>30ml</span></div>
+                            <h3>Facial Serum</h3>
+                            <div class="product-price">₱350</div>
+                            <p class="product-desc">Hydrating serum designed to boost skin moisture and complement your everyday beauty routine.</p>
+                        </div>
+                        <div class="product-card-actions">
+                            <button class="btn btn-primary" data-open="serum">View Details</button>
+                            <button class="btn-icon" data-toggle="serum" aria-label="Add Facial Serum to routine" aria-pressed="false"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="product-card tilt reveal" style="--d:.2s" data-category="cosmetics" data-id="liptint">
+                        <span class="product-tag">Must Have</span>
+                        <button class="product-img-box" data-open="liptint" aria-label="View Lip Tint details">
+                            <picture>
+                                <source srcset="assets/images/liptint-sm.webp" type="image/webp">
+                                <img src="assets/images/liptint.jpg" alt="Jam Beauty Co. Lip Tint, 5ml" loading="lazy" width="640" height="640">
+                            </picture>
+                            <span class="img-hover"><i class="fa-solid fa-expand"></i> Quick view</span>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-meta"><span>Cosmetics</span><span>5ml</span></div>
+                            <h3>Lip Tint</h3>
+                            <div class="product-price">₱180</div>
+                            <p class="product-desc">Lightweight and long-lasting tint for adding a vibrant touch of natural color to your look.</p>
+                        </div>
+                        <div class="product-card-actions">
+                            <button class="btn btn-primary" data-open="liptint">View Details</button>
+                            <button class="btn-icon" data-toggle="liptint" aria-label="Add Lip Tint to routine" aria-pressed="false"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROUTINE BUILDER -->
+        <section id="calculator">
+            <div class="wrap">
+                <div class="calculator-card reveal">
+                    <div class="calc-info">
+                        <span class="eyebrow eyebrow-light">Interactive Tool</span>
+                        <h3>Skincare Routine &amp; Bundle Estimator</h3>
+                        <p>Select products to calculate your total for a complete Jam Beauty Co. everyday self-care bundle.</p>
+
+                        <div class="calc-options">
+                            <button class="calc-option" data-calc="cleanser" aria-pressed="false">
+                                <img src="assets/images/cleanser-sm.webp" alt="" width="52" height="52">
+                                <span class="calc-label"><b>Step 1 · Cleanse</b>Facial Cleanser</span>
+                                <span class="calc-price">₱250</span>
+                                <span class="calc-checkbox"><i class="fa-solid fa-check"></i></span>
+                            </button>
+                            <button class="calc-option" data-calc="serum" aria-pressed="false">
+                                <img src="assets/images/serum-sm.webp" alt="" width="52" height="52">
+                                <span class="calc-label"><b>Step 2 · Treat</b>Facial Serum</span>
+                                <span class="calc-price">₱350</span>
+                                <span class="calc-checkbox"><i class="fa-solid fa-check"></i></span>
+                            </button>
+                            <button class="calc-option" data-calc="liptint" aria-pressed="false">
+                                <img src="assets/images/liptint-sm.webp" alt="" width="52" height="52">
+                                <span class="calc-label"><b>Step 3 · Finish</b>Lip Tint</span>
+                                <span class="calc-price">₱180</span>
+                                <span class="calc-checkbox"><i class="fa-solid fa-check"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="calc-result-box">
+                        <div>
+                            <span class="calc-kicker">Estimated Bundle Total</span>
+                            <div class="total-wrap">
+                                <div class="total-price" id="calcTotal" aria-live="polite">₱0</div>
+                                <svg class="ring" viewBox="0 0 80 80" aria-hidden="true">
+                                    <circle cx="40" cy="40" r="34" class="ring-bg"/>
+                                    <circle cx="40" cy="40" r="34" class="ring-fg" id="ringFg"/>
+                                </svg>
+                            </div>
+                            <div class="routine-steps" id="routineSteps" aria-hidden="true">
+                                <span data-step="cleanser">Cleanse</span><i class="fa-solid fa-arrow-right"></i>
+                                <span data-step="serum">Treat</span><i class="fa-solid fa-arrow-right"></i>
+                                <span data-step="liptint">Finish</span>
+                            </div>
+                            <p class="calc-advice" id="calcAdvice">Select items above to view total and personalized routine recommendations.</p>
+                        </div>
+
+                        <div class="calc-actions">
+                            <button class="btn btn-primary" id="sendBundle"><i class="fa-solid fa-heart"></i> Send My Bundle</button>
+                            <button class="btn btn-ghost" id="clearBundle"><i class="fa-solid fa-rotate-left"></i> Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4Ps -->
+        <section class="marketing-section" id="marketing">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Strategy &amp; Framework</span>
+                    <h2>The 4Ps of Marketing Mix</h2>
+                    <p>How Jam Beauty Co. creates value, engages customers, and builds long-term brand trust.</p>
+                </div>
+
+                <div class="marketing-grid">
+                    <article class="p-card tilt reveal">
+                        <div class="p-header"><div class="p-badge"><i class="fa-solid fa-box-open"></i></div><div><small>01</small><h3>Product Strategy</h3></div></div>
+                        <p>Focus on daily essential skincare &amp; cosmetics such as cleansers, serums, and lip tints. Prioritizing sleek packaging, transparent ingredient labeling, quality control, and customer satisfaction.</p>
+                        <ul class="p-tags"><li>Cleanser</li><li>Serum</li><li>Lip Tint</li></ul>
+                    </article>
+
+                    <article class="p-card tilt reveal" style="--d:.08s">
+                        <div class="p-header"><div class="p-badge"><i class="fa-solid fa-tags"></i></div><div><small>02</small><h3>Price Strategy</h3></div></div>
+                        <p>Accessible pricing tailored for students and daily consumers. Smart price points balance value with quality.</p>
+                        <div class="price-bars">
+                            <div><span>Facial Cleanser</span><div class="bar"><i style="--w:71%"></i></div><b>₱250</b></div>
+                            <div><span>Facial Serum</span><div class="bar"><i style="--w:100%"></i></div><b>₱350</b></div>
+                            <div><span>Lip Tint</span><div class="bar"><i style="--w:51%"></i></div><b>₱180</b></div>
+                        </div>
+                    </article>
+
+                    <article class="p-card tilt reveal" style="--d:.16s">
+                        <div class="p-header"><div class="p-badge"><i class="fa-solid fa-location-dot"></i></div><div><small>03</small><h3>Place Strategy</h3></div></div>
+                        <p>Based in the City of Manila with direct digital ordering through social media channels. Expansion plans include local pop-up booths, quick deliveries, and trusted local reseller partnerships.</p>
+                        <ul class="p-tags"><li>Social ordering</li><li>Pop-ups</li><li>Delivery</li><li>Resellers</li></ul>
+                    </article>
+
+                    <article class="p-card tilt reveal" style="--d:.24s">
+                        <div class="p-header"><div class="p-badge"><i class="fa-solid fa-bullhorn"></i></div><div><small>04</small><h3>Promotion Strategy</h3></div></div>
+                        <p>Building community engagement across Facebook, Instagram, and TikTok. Utilizing authentic social proof, launch discounts, bundle deals, and honest customer reviews without misleading claims.</p>
+                        <ul class="p-tags"><li>Facebook</li><li>Instagram</li><li>TikTok</li><li>Bundles</li></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="wrap">
+                <div class="contact-grid">
+                    <div class="reveal">
+                        <span class="eyebrow">Get In Touch</span>
+                        <h2 class="contact-title">Let's make everyday self-care feel special.</h2>
+                        <p class="contact-lead">Have questions about our portfolio or looking to collaborate with Jam Beauty Co.? Reach out through any of our channels below.</p>
+
+                        <div class="contact-method-list">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-text"><strong>Email Address</strong><a href="mailto:mondijarjeralynjam081504@gmail.com">mondijarjeralynjam081504@gmail.com</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                                <div class="contact-text"><strong>Facebook</strong><a href="https://www.facebook.com/share/1MJmxZgTjp/" target="_blank" rel="noopener">Jeralyn Jam</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                                <div class="contact-text"><strong>Instagram</strong><a href="https://www.instagram.com/Usrnmjam_/" target="_blank" rel="noopener">@Usrnmjam_</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-tiktok"></i></div>
+                                <div class="contact-text"><strong>TikTok</strong><a href="https://www.tiktok.com/@itz_mejammy?_r=1&_t=ZS-9B0No4BQL1F" target="_blank" rel="noopener">@itz_mejammy</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-text"><strong>Contact Number</strong><a href="tel:09653775945">09653775945</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card reveal" style="--d:.12s">
+                        <h3>Send a Direct Message</h3>
+                        <p class="form-note">This opens your email app with your message ready to send.</p>
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" class="form-input" placeholder="e.g. Maria Santos" autocomplete="name" required>
+                                <small class="err" data-err="name"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-input" placeholder="e.g. maria@gmail.com" autocomplete="email" required>
+                                <small class="err" data-err="email"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-input" placeholder="How can we assist you?" maxlength="600" required></textarea>
+                                <div class="counter"><small class="err" data-err="message"></small><span id="msgCount">0 / 600</span></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <a href="#home" class="logo logo-footer"><img src="assets/images/logo.svg" alt="" width="30" height="30"><span>JAM <em>BEAUTY CO.</em></span></a>
+            <p class="footer-tag">Beauty starts with you <i class="fa-solid fa-heart"></i></p>
+            <p>&copy; <span id="currentYear">2026</span> Jam Beauty Co. &middot; Business Portfolio &middot; Designed for Beauty &amp; Confidence.</p>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="productModal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="close-modal" id="closeModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-media">
+                <img id="modalImg" src="" alt="" width="1200" height="1200">
+                <div class="modal-nav">
+                    <button id="modalPrev" aria-label="Previous product"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="modalNext" aria-label="Next product"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <span class="eyebrow" id="modalTag">Product Overview</span>
+                <h3 id="modalTitle">Product Title</h3>
+                <div class="modal-price-row"><div id="modalPrice">₱000</div><span id="modalSize" class="size-chip"></span></div>
+                <p id="modalDesc"></p>
+                <ul class="modal-benefits" id="modalBenefits"></ul>
+                <div class="modal-extra" id="modalExtra"></div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modalAdd"><i class="fa-solid fa-plus"></i> Add to Routine</button>
+                    <button class="btn btn-secondary" id="modalDone">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
